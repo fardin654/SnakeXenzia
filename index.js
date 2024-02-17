@@ -4,7 +4,7 @@ const gameSound = new Audio("snake_music.mp3");
 const foodSound = new Audio("eat.wav");
 const endSound = new Audio("end.wav");
 const ChangeDir = new Audio("move.wav");
-let speed = 5;
+let speed = 8;
 let lastPaintTime = 0;
 let snakeArr = [
     {x:13,y:15}
@@ -51,7 +51,7 @@ function gameEngine(){
         gameSound.play();
         score = 0;
         scr.innerHTML = "Score :"+score;
-        speed = 5;
+        speed = 8;
         cmt.innerHTML="Game Over! Press a Key to Start Again"
     }
 
@@ -59,7 +59,7 @@ function gameEngine(){
     if(snakeArr[0].x === food.x  && snakeArr[0].y === food.y){
         score+=1;
         if(score === toSpeed){
-            speed+=1.5;
+            speed+=2.5;
             toSpeed+=5;
         }
       
