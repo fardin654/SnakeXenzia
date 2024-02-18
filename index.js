@@ -112,7 +112,7 @@ window.requestAnimationFrame(main);
 window.addEventListener('keydown',(e)=>{
     cmt.innerHTML="";
     ChangeDir.play();
-    if(e.key == 'p'){
+    if(e.key == 'p' || e.key == ' '){
         pause();
     }else if (!isPaused){
         switch(e.key){
@@ -147,7 +147,7 @@ function pause(){
     isPaused = !isPaused;
     if (isPaused) {
         gameSound.pause();
-        cmt.innerHTML="Game Paused!! Press 'P' to resume";
+        cmt.innerHTML="Game Paused!! Press 'P' or SpaceBar to resume";
     }else {
         gameSound.play();
         cmt.innerHTML="";
