@@ -112,7 +112,7 @@ window.requestAnimationFrame(main);
 window.addEventListener('keydown',(e)=>{
     cmt.innerHTML="";
     ChangeDir.play();
-    if(e.key == 'p' || e.key == ' '){
+    if(e.key == 'p' || e.key == " "){
         pause();
     }else if (!isPaused){
         switch(e.key){
